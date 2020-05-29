@@ -1,10 +1,16 @@
 import React from 'react';
-import './App.css';
+
+import Header from './components/organisms/Header';
+import Footer from './components/organisms/Footer';
+import './App.scss';
+import Content from './components/organisms/Content';
 
 function App() {
   return (
     <div className="App">
-      Blue olx app
+      <Header />
+      <Content />
+      <Footer />
     </div>
   );
 }
