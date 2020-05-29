@@ -7,7 +7,7 @@ function Footer() {
 
     return (
         <div className="footer">
-            <p>Copyright {date.getFullYear()} @ BlueTeam</p>
+            <p>Copyright {date.getFullYear()} @ <a href="https://blueteam.com">BlueTeam</a></p>
         </div>
     );
 }
