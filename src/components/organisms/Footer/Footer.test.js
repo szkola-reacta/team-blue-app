@@ -7,7 +7,7 @@ test('render footer',() => {
     const { getByText } = render(<Footer />);
     const date = new Date();
     const currentYear = date.getFullYear();
-    const searchRegExp = new RegExp(currentYear,'i');
+    const searchRegExp = new RegExp(currentYear, 'i');
 
     expect(getByText(searchRegExp)).toBeInTheDocument();
 });
