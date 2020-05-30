@@ -1,23 +1,32 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Search from './Components/Search';
+import CategoryList from './Components/CategoryList';
 
-import Header from './components/organisms/Header';
-import Footer from './components/organisms/Footer';
-import Content from './components/organisms/Content';
+import './Styles/fontello/css/fontello.css';
 import './App.scss';
 
-//For tests. Delete it when it won't be needed.
-const Test = (props) => <p>{props.text}</p>;
-
 function App() {
+  const categories = [
+    {
+      name: "Motoryzacja",
+      icon: "icon-cab"
+    }, {
+      name: "Nieruchomości",
+      icon: "icon-building-filled"
+    }, {
+      name: "Praca",
+      icon: "icon-suitcase"
+    }, {
+      name: "Elektronika",
+      icon: "icon-mobile"
+    }
+  ];
+
   return (
-    <div className="App">
-      <Header />
-      <Content>
-        <Test path="/" text="content" />
-        <Test path="/signup" text="signup" />
-      </Content>
-      <Footer/>
-    </div>
+    <Fragment>
+       <Search />
+       <CategoryList categories={categories} />
+    </Fragment>
   );
 }
 
