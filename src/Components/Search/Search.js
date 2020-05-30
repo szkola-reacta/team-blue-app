@@ -8,8 +8,6 @@ import Button from 'react-bootstrap/Button';
 import Background from './bg.jpg';
 
 import './Search.scss';
-import '../../Styles/fontello/css/fontello.css';
-
 
 function Search() {
   const searchStyle = {
