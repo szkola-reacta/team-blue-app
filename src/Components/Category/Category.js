@@ -1,14 +1,12 @@
 import React from 'react';
-import Image from 'react-bootstrap/Image';
 
 import './Category.scss';
-import '../../Styles/fontello/css/fontello.css';
 
 function Category({ name, icon }) {
   return (
-      <div className="icon-div" xs={12} md={6} lg={3} xl={3} >
-        <Image className={icon} alt="" src="" roundedCircle />
-        <p className="icon-name">{name}</p>
+      <div className="category" xs={12} md={6} lg={3} xl={3} >
+        <img className={icon} alt="" src="" />
+        <span className="category-name">{name}</span>
       </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Search from './Components/Search';
 import CategoryList from './Components/CategoryList';
 
-
+import './Styles/fontello/css/fontello.css';
 import './App.scss';
 
 function App() {
