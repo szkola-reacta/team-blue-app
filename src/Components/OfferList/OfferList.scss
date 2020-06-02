@@ -1,0 +1,13 @@
+.offer-list {
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   // text-align: center;
+   margin-top: 20px;
+
+   .offer-row {
+     width: 1000px;
+     margin-left: auto;
+     margin-right: auto;
+   }
+ }
