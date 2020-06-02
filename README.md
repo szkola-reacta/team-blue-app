@@ -1,73 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Blue Shopper
+
+## What is it?
+
+It's a simple demo app, which allows user to list categories, categories' offers and offers itself.
+
+## Technology Stack
+
+- React
+
+- Reach Router
+
+- MirageJS (for mocking data)
+
+- Faker (for generating random data)
+
+## API URLs
+
+`GET /api/categories`
+
+    [{
+	  name:  "Motoryzacja",
+	  id:  "1"
+	}, {
+	  name:  "Nieruchomości",
+	  id:  "2"
+	}, {
+	  name:  "Praca",
+	  id:  "3"
+	}]
+
+`GET /api/categories/{category_id}/offers`
+
+    [{
+	  added_at:  "18/05/2020",
+	  city:  "Gdańsk",
+	  description:  "Quod quia minus et ipsum cum. Dolores quia omnis.",
+	  id:  "21",
+	  location:  {
+	    latitude:  "-39.0610",
+	    longitude:  "113.9959
+	  },
+	  name:  "Unbranded Concrete Cheese",
+	  price:  "PLN 7061.00",
+	  seller:  {
+	    phone:  "25-310-58-29",
+	    name:  "Rudolf Drzewiecki",
+	    id:  "2"
+	  },
+	  thumbnail_url:  "https://picsum.photos/id/200/200/300"
+	}]
+
+`GET /api/offers/{offer_id}`
+
+    {
+	  added_at:  "18/05/2020",
+	  city:  "Gdańsk",
+	  description:  "Quod quia minus et ipsum cum. Dolores quia omnis.",
+	  id:  "21",
+	  location:  {
+	    latitude:  "-39.0610",
+	    longitude:  "113.9959
+	  },
+	  name:  "Unbranded Concrete Cheese",
+	  price:  "PLN 7061.00",
+	  seller:  {
+	    phone:  "25-310-58-29",
+	    name:  "Rudolf Drzewiecki",
+	    id:  "2"
+	  },
+	  thumbnail_url:  "https://picsum.photos/id/200/200/300"
+	}
 
 ### Sources
 
 The project uses:
 [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
