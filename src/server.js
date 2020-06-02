@@ -39,6 +39,10 @@ export function makeServer({ environment = 'test' }) {
                 name(i) {
                     const categoryNames = ['Motoryzacja', 'Nieruchomości', 'Praca', 'Dom i Ogród', 'Elektronika', 'Moda', 'Rolnictwo', 'Zwierzęta'];
                     return categoryNames[i % categoryNames.length];
+                },
+                icon(i) {
+                    const categoryIcons = ['icon-cab', 'icon-building-filled', 'icon-suitcase', 'icon-garden', 'icon-mobile', 'icon-t-shirt', 'icon-rocket', 'icon-guidedog'];
+                    return categoryIcons[i % categoryIcons.length];
                 }
             }),
             offer: Factory.extend({
