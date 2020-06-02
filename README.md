@@ -1,4 +1,3 @@
-
 # Blue Shopper
 
 ## What is it?
@@ -71,3 +70,8 @@ It's a simple demo app, which allows user to list categories, categories' offers
 	  },
 	  thumbnail_url:  "https://picsum.photos/id/200/200/300"
 	}
+
+### Sources
+
+The project uses:
+[react-bootstrap](https://github.com/react-bootstrap/react-bootstrap)
