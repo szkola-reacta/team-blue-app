@@ -24,8 +24,8 @@ function App() {
 
   return (
     <Fragment>
-       <Search />
-       <CategoryList categories={categories} />
+      <Search />
+      <CategoryList categories={categories} />
     </Fragment>
   );
 }
