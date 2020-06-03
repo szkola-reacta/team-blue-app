@@ -1,0 +1,9 @@
+
+.icon-guidedog { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-t-shirt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-mobile { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.icon-garden { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe81a;&nbsp;'); }
+.icon-suitcase { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0f2;&nbsp;'); }
+.icon-rocket { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf135;&nbsp;'); }
+.icon-building-filled { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1ad;&nbsp;'); }
+.icon-cab { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1b9;&nbsp;'); }

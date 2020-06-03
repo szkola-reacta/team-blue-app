@@ -1,10 +1,8 @@
 import React, { Fragment, useState, useEffect } from 'react';
-import Search from './Components/Search';
-import CategoryList from './Components/CategoryList';
-import OfferList from './Components/OfferList';
 
-
-import './Styles/fontello/css/fontello.css';
+import Search from './components/Search';
+import CategoryList from './components/CategoryList';
+import OfferList from './components/OfferList';
 import './App.scss';
 
 function App() {
@@ -14,15 +12,12 @@ function App() {
 
   useEffect(() => {
     fetch('api/categories')
-    .then(response => response.json)
-    .then(data => setCategories(data), );
-  }, [])
-
-  useEffect(() => {
-    fetch('/categories/:id/offers')
-    .then(response => response.json)
-    .then(data => setOffers(data), );
-  }, [])
+      .then(response => response.json())
+      .then(data => setCategories(data));
+    fetch('api/categories/1/offers')
+      .then(response => response.json())
+      .then(data => setOffers(data));
+  }, []);
 
   return (
     <Fragment>
