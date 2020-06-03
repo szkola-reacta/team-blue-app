@@ -1,6 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
 
-import './styles/fontello/css/fontello.css';
 import './App.scss';
 
 import Search from './components/Search';
