@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 
 import './OfferList.scss';
 
-function OfferList({ offers }) {
+function OfferList() {
   return (
     <Container className="offer-list" fluid>
       <Row className="offer-row">
