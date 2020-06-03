@@ -1,24 +1,21 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React from 'react';
 
 import './App.scss';
 
-import Search from './components/Search';
-import CategoryList from './components/CategoryList';
+import Header from './Components/organisms/Header';
+import Content from './Components/organisms/Content';
+import Footer from './Components/organisms/Footer';
+import Home from './Components/Pages/Home/';
 
 function App() {
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    fetch('/api/categories')
-      .then(response => response.json())
-      .then(data => setCategories(data));
-  }, [])
-
   return (
-    <Fragment>
-      <Search />
-      <CategoryList categories={categories} />
-    </Fragment>
+    <div className="App">
+      <Header />
+      <Content>
+        <Home path="/" />
+      </Content>
+      <Footer />
+    </div>
   );
 }
 
