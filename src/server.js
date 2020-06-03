@@ -14,6 +14,11 @@ export function makeServer({ environment = 'test' }) {
         embed: true,
         root: false,
         include: ['seller', 'location']
+      }),
+      offersList: Serializer.extend({
+        embed: true,
+        root: false,
+        attrs: ['id', 'name', 'added_at', 'price', 'city', 'thumbnail_url']
       })
     },
 
@@ -64,6 +69,9 @@ export function makeServer({ environment = 'test' }) {
         },
         thumbnail_url(i) {
           return `https://picsum.photos/id/${i * 10}/200/300`;
+        },
+        photos(i) {
+          return [faker.image.technics(1280, 720, true), faker.image.technics(1280, 720, true), faker.image.technics(1280, 720, true)];
         }
       }),
       seller: Factory.extend({
@@ -89,10 +97,10 @@ export function makeServer({ environment = 'test' }) {
 
       this.get('/categories');
 
-      this.get('/categories/:id/offers', (schema, request) => {
-        let category = schema.categories.find(request.params.id)
-
-        return category.offers;
+      this.get('/categories/:id/offers', function (schema, request) {
+        let category = schema.categories.find(request.params.id);
+        let json = this.serialize(category.offers, 'offersList');
+        return json;
       });
 
       this.get('/offers/:id', (schema, request) => {
