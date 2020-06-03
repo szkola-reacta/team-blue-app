@@ -1,3 +1,3 @@
-import CategoryList from './CategoryList.js';
+import CategoryList from './CategoryList';
 
 export default CategoryList;

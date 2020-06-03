@@ -1,26 +1,18 @@
-import React, { Fragment } from 'react';
-import Search from './Components/Search';
-import CategoryList from './Components/CategoryList';
+import React, { Fragment, useState, useEffect } from 'react';
 
-import './Styles/fontello/css/fontello.css';
 import './App.scss';
 
+import Search from './components/Search';
+import CategoryList from './components/CategoryList';
+
 function App() {
-  const categories = [
-    {
-      name: "Motoryzacja",
-      icon: "icon-cab"
-    }, {
-      name: "Nieruchomości",
-      icon: "icon-building-filled"
-    }, {
-      name: "Praca",
-      icon: "icon-suitcase"
-    }, {
-      name: "Elektronika",
-      icon: "icon-mobile"
-    }
-  ];
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/categories')
+      .then(response => response.json())
+      .then(data => setCategories(data));
+  }, [])
 
   return (
     <Fragment>
