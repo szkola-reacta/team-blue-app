@@ -1,5 +1,5 @@
 .offer{
-  width: 1000px;
+  width: 100%;
   height: 250px;
   margin: 16px auto;
   border: 1px solid #eee;
@@ -23,17 +23,17 @@
     display: block;
     position: relative;
     font-weight: 700;
-    width: 560px;
+    width: 55%;
     left: 25%;
-    bottom: 235px;
+    bottom: 108.5%;
   }
 
   .offer-price {
     display: block;
     position: relative;
+    float: right;
     font-weight: 700;
-    width: 140px;
-    left: 86%;
+    width: 15%;
     bottom: 259px;
   }
 
