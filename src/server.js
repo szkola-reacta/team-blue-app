@@ -68,7 +68,7 @@ export function makeServer({ environment = 'test' }) {
           return cities[i % cities.length];
         },
         thumbnail_url(i) {
-          return `https://picsum.photos/id/${i * 10}/200/300`;
+          return `https://picsum.photos/id/${i * 10}/225/225`;
         },
         photos(i) {
           return [faker.image.technics(1280, 720, true), faker.image.technics(1280, 720, true), faker.image.technics(1280, 720, true)];
