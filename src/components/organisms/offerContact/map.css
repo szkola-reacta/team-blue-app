@@ -1,0 +1,11 @@
+.map{
+	height: 300px;
+	border-radius: 1em;
+	border: 1px solid rgb(48, 47, 47);
+	box-shadow: 0 0 0.3em 0.1em rgb(66, 65, 65);
+	width:100%;
+}
+.rounded-circle{
+	height: 140px;
+	width: 140px;
+}
