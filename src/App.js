@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
+
 import Search from './components/Search';
 import CategoryList from './components/CategoryList';
 import OfferList from './components/OfferList';
