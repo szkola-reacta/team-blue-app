@@ -29,6 +29,13 @@ It's a simple demo app, which allows user to list categories, categories' offers
 	  id:  "3"
 	}]
 
+`GET /api/categories/{category_id}`
+
+  {
+    name: "Nieruchomości",
+    id: 2
+  }
+
 `GET /api/categories/{category_id}/offers`
 
     [{

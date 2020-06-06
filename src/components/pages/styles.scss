@@ -1,5 +1,17 @@
 .page {
-  .page__content {
-    padding: 1rem 1rem 1rem 1rem;
+  .page__header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(179, 179, 179);
+
+    h4 {
+      padding-left: 1rem;
+      margin: 0 0 0 0;
+    }
   }
 }

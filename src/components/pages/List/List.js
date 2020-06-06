@@ -7,9 +7,14 @@ import OfferList from '../../OfferList';
 import '../styles.scss';
 
 function List({ categoryID }) {
+  const [categoryName, setCategoryName] = useState('');
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
+    fetch(`/api/categories/${categoryID}`)
+      .then(response => response.json())
+      .then(data => setCategoryName(data.name));
+
     fetch(`/api/categories/${categoryID}/offers`)
       .then(response => response.json())
       .then(data => setOffers(data));
@@ -23,10 +28,11 @@ function List({ categoryID }) {
   return (
     <div className="page">
       <Search />
-      <div className="page__content">
+      <div className="page__header">
         <Button variant="outline-primary" onClick={handleBackClick}>&lt; Back</Button>
-        <OfferList offers={offers} />
+        <h4>{categoryName}</h4>
       </div>
+        <OfferList offers={offers} />
     </div>
   );
 }
