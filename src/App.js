@@ -12,9 +12,9 @@ function App() {
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
-    fetch(`api/categories/1/offers`)
+    fetch(`/api/categories`)
       .then(response => response.json())
-      .then(data => setOffers(data));
+      .then(data => console.log(data));
   }, []);
 
   return (
@@ -22,7 +22,7 @@ function App() {
       <Header />
       <Content>
         <Home path="/" />
-        <List path="/categories/:categoryID"/>
+        <List path="/categories/:categoryID" />
       </Content>
       <Footer />
     </div>

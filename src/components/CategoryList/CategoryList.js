@@ -11,7 +11,7 @@ function CategoryList({ categories }) {
     <Container className="category-list" fluid>
       <Row className="category-row">
         {categories.map((element, index) =>
-          <Col key={`category-${index}`} xs={12} sm={12} md={6} lg={3} xl={3}>
+          <Col key={`category-${element.id}`} xs={12} sm={12} md={6} lg={3} xl={3}>
             <Category {...element} />
           </Col>
         )}

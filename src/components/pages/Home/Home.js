@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Search from '../../Search';
 import CategoryList from '../../CategoryList';
+import '../styles.scss';
 
 function Home() {
   const [categories, setCategories] = useState([]);
@@ -15,7 +16,9 @@ function Home() {
   return (
     <div className="page">
       <Search />
-      <CategoryList categories={categories} />
+      <div className="page__content">
+        <CategoryList categories={categories} />
+      </div>
     </div>
   );
 }
