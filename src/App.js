@@ -25,7 +25,7 @@ function App() {
         <OfferList path="/offers" offers={offers} />
       </Content>
       <Footer />
-    </div> 
+    </div>
   );
 }
 
