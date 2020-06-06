@@ -5,8 +5,8 @@ import './App.scss';
 import Header from './Components/Header';
 import Content from './Components/Content';
 import Footer from './Components/Footer';
-import Home from './Components/Pages/Home/';
-import OfferList from './Components/OfferList';
+import Home from './Components/Pages/Home';
+import List from './Components/Pages/List';
 
 function App() {
   const [offers, setOffers] = useState([]);
@@ -22,7 +22,7 @@ function App() {
       <Header />
       <Content>
         <Home path="/" />
-        <OfferList path="/offers" offers={offers} />
+        <List path="/categories/:categoryID"/>
       </Content>
       <Footer />
     </div>
