@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import './App.scss';
 
@@ -9,14 +9,6 @@ import Home from './Components/Pages/Home';
 import List from './Components/Pages/List';
 
 function App() {
-  const [offers, setOffers] = useState([]);
-
-  useEffect(() => {
-    fetch(`/api/categories`)
-      .then(response => response.json())
-      .then(data => console.log(data));
-  }, []);
-
   return (
     <div className="App">
       <Header />
