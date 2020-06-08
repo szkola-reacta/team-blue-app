@@ -13,7 +13,7 @@ const Offer = () => {
   const [offer, setOffer] = useState({})
 
   useEffect(() => {
-    fetch("/api/offers/1")
+    fetch("/api/offers/:id")
     .then(response => response.json())
     .then(data => setOffer(data))
     }, [offer.id])
