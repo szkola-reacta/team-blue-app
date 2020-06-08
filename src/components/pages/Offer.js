@@ -1,8 +1,9 @@
-import React, { useState, useLayoutEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
-import { Container, Col, Row } from 'react-bootstrap'
+import { Container, Col, Row, Button } from 'react-bootstrap'
 
 import OfferContact from './../organisms/offerContact'
+import Footer from '../organisms/Footer'
 
 import logo from './../../images/logo-placeholder.svg'
 
@@ -11,7 +12,7 @@ import './pages.scss'
 const Offer = () => {
   const [offer, setOffer] = useState({})
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     fetch("/api/offers/1")
     .then(response => response.json())
     .then(data => setOffer(data))
@@ -24,21 +25,21 @@ const Offer = () => {
           <img className="logo float-left m-3" src={logo} alt="er" />
         </Col>
         <Col>
-          <button className="btn btn-primary float-right m-4">
+          <Button variant="primary" className="float-right m-4">
             Sign in
-          </button>
+          </Button>
         </Col>
       </Row>
       <Row>
         <Col xs="8">
           <Row>
-            <button className="btn btn-outline-secondary m-4">
+            <Button variant="outline-secondary" className="m-4">
               Back
-            </button>
+            </Button>
           </Row>
-          <figure className="text-center">
-            <img className="offerImage" src={offer.thumbnail_url} alt="error" />
-          </figure>
+          <Row className="justify-content-center">
+            <img className="offer-image" src={offer.thumbnail_url} alt="error" />
+          </Row>
           <div className="m-4 p-4">
             <h3>
               {offer.name}
@@ -54,7 +55,7 @@ const Offer = () => {
           <OfferContact offer={offer} />
         </Col>
       </Row>
-      <footer className="p-4 align-middle border-top">&copy; Team Blue</footer>
+      <Footer />
     </Container>
   )
 }

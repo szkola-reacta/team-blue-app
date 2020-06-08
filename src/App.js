@@ -26,7 +26,7 @@ function App() {
       <Router>      
         <Home path="/" categories={categories} />
         <List path="/list" offers={offers} />
-        <Offer path="/offer"/>
+        <Offer path="/offer/:id"/>
       </Router>
       
     </Fragment>
