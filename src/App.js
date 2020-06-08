@@ -7,7 +7,7 @@ import Content from './Components/Content';
 import Footer from './Components/Footer';
 import Home from './Components/Pages/Home';
 import OfferListPage from './Components/Pages/OfferListPage';
-import NotFoundMessage from './Components/NotFoundMessage';
+import Page404 from './Components/Pages/Page404';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Content>
         <Home path="/" />
         <OfferListPage path="/categories/:categoryID/offers" />
-        <NotFoundMessage message="Podana strona nie została odnaleziona" default />
+        <Page404 path="/404" default />
       </Content>
       <Footer />
     </div>

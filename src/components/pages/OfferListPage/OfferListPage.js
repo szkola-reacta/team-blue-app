@@ -4,38 +4,39 @@ import Button from 'react-bootstrap/Button';
 
 import Search from '../../Search';
 import OfferList from '../../OfferList';
-import NotFoundMessage from '../../NotFoundMessage';
 import '../styles.scss';
 
 
 function OfferListPage({ categoryID }) {
   const [categoryName, setCategoryName] = useState('');
   const [offers, setOffers] = useState([]);
-  const [categoryNotFound, setCategoryNotFound] = useState(false);
 
   useEffect(() => {
-    fetch(`/api/categories/${categoryID}`)
+    const abortController = new AbortController();
+
+    fetch(`/api/categories/${categoryID}`, { signal: abortController.signal })
       .then(response => response.json())
       .then(data => setCategoryName(data.name))
-      .catch(() => setCategoryNotFound(true));
+      .catch(() => navigate('/404'));
 
-    fetch(`/api/categories/${categoryID}/offers`)
+    fetch(`/api/categories/${categoryID}/offers`, { signal: abortController.signal })
       .then(response => response.json())
-      .then(data => setOffers(data))
-      .catch(() => setCategoryNotFound(true));
+      .then(data => {
+        if (typeof(data) === Array) {
+          setOffers(data)
+        }
+      })
+      .catch(() => navigate('/404'));
+
+    return () => {
+      abortController.abort();
+    }
   }, [categoryID]);
+
 
   const handleBackClick = (event) => {
     event.preventDefault();
     navigate(-1);
-  }
-
-  let pageContent;
-
-  if (categoryNotFound) {
-    pageContent = <NotFoundMessage message="Podana kategoria nie została odnaleziona." />
-  } else {
-    pageContent = <OfferList offers={offers} />
   }
 
   return (
@@ -45,7 +46,7 @@ function OfferListPage({ categoryID }) {
         <Button variant="outline-primary" onClick={handleBackClick}>&lt; Back</Button>
         <h4>{categoryName}</h4>
       </div>
-      {pageContent}
+      <OfferList offers={offers} />
     </div>
   );
 }
