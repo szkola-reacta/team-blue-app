@@ -1,8 +1,10 @@
 import React, { Fragment, useState, useEffect } from 'react';
 
-import Search from './components/Search';
-import CategoryList from './components/CategoryList';
-import OfferList from './components/OfferList';
+import { Router } from '@reach/router'
+
+import Home from './components/pages/Home';
+import List from './components/pages/List'
+import Offer from './components/pages/Offer';
 import './App.scss';
 
 function App() {
@@ -21,9 +23,12 @@ function App() {
 
   return (
     <Fragment>
-      <Search />
-      <CategoryList categories={categories} />
-      <OfferList offers={offers} />
+      <Router>      
+        <Home path="/" categories={categories} />
+        <List path="/list" offers={offers} />
+        <Offer path="/offer"/>
+      </Router>
+      
     </Fragment>
   );
 }
