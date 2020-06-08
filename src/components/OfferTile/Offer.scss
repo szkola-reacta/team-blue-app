@@ -11,35 +11,36 @@
     box-shadow: 2px 3px 6px 6px #ccc;
   }
 
-  .offer-image-thumbnail {
-    display: block;
-    position: relative;
-    right: 5px;
-    bottom: 5px;
+  .offer-thumbnail {
+    padding: inherit;
+    position: absolute;
+    top: 5%;
+    left: 1%;
     z-index: 1;
   }
 
   .offer-name {
-    display: block;
-    position: relative;
+    padding: inherit;
+    position: absolute;
     font-weight: 700;
     width: 55%;
+    top: 3%;
     left: 25%;
-    bottom: 108.5%;
   }
 
   .offer-price {
-    display: block;
-    position: relative;
-    float: right;
+    padding: inherit;
+    position: absolute;
     font-weight: 700;
     width: 15%;
-    bottom: 259px;
+    top: 3%;
+    right: 0%;
   }
 
   .offer-location-date {
-    position: relative;
+    padding: inherit;
+    position: absolute;
     left: 25%;
-    bottom: 73px;
+    bottom: 3%;
   }
 }

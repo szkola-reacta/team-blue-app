@@ -11,8 +11,8 @@ function OfferList({ offers }) {
   return (
     <Container className="offer-list">
       <Row className="offer-row">
-        {offers.map((element, index) =>
-          <Col key={offers.id}>
+        { offers.map((element, index) =>
+          <Col key={`offer-list-${index}`}>
             <Offer {...element} />
           </Col>
         )}
