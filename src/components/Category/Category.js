@@ -6,7 +6,7 @@ import './Category.scss';
 function Category({ name, icon, id }) {
 
   const handleCategoryClick = (event) => {
-    navigate(`/categories/${id}`);
+    navigate(`/categories/${id}/offers`);
   }
 
   return (

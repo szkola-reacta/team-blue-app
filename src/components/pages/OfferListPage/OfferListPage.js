@@ -4,25 +4,38 @@ import Button from 'react-bootstrap/Button';
 
 import Search from '../../Search';
 import OfferList from '../../OfferList';
+import NotFoundMessage from '../../NotFoundMessage';
 import '../styles.scss';
 
-function List({ categoryID }) {
+
+function OfferListPage({ categoryID }) {
   const [categoryName, setCategoryName] = useState('');
   const [offers, setOffers] = useState([]);
+  const [categoryNotFound, setCategoryNotFound] = useState(false);
 
   useEffect(() => {
     fetch(`/api/categories/${categoryID}`)
       .then(response => response.json())
-      .then(data => setCategoryName(data.name));
+      .then(data => setCategoryName(data.name))
+      .catch(() => setCategoryNotFound(true));
 
     fetch(`/api/categories/${categoryID}/offers`)
       .then(response => response.json())
-      .then(data => setOffers(data));
+      .then(data => setOffers(data))
+      .catch(() => setCategoryNotFound(true));
   }, [categoryID]);
 
   const handleBackClick = (event) => {
     event.preventDefault();
     navigate(-1);
+  }
+
+  let pageContent;
+
+  if (categoryNotFound) {
+    pageContent = <NotFoundMessage message="Podana kategoria nie została odnaleziona." />
+  } else {
+    pageContent = <OfferList offers={offers} />
   }
 
   return (
@@ -32,9 +45,9 @@ function List({ categoryID }) {
         <Button variant="outline-primary" onClick={handleBackClick}>&lt; Back</Button>
         <h4>{categoryName}</h4>
       </div>
-        <OfferList offers={offers} />
+      {pageContent}
     </div>
   );
 }
 
-export default List;
+export default OfferListPage;
