@@ -11,7 +11,6 @@ function Offer({ thumbnail_url, name, price, city, added_at, id }) {
         <span className="offer-name">{name}</span>
         <span className="offer-price">{price}</span>
         <span className="offer-location-date">{city}  {added_at}</span>
-        <span>offer id: {id}</span>
     </div>
   );
 }
