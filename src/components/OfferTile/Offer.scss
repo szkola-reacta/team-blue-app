@@ -22,17 +22,18 @@
   .offer-name {
     padding: inherit;
     position: absolute;
+    text-align: left;
     font-weight: 700;
-    width: 55%;
+    width: 50%;
     top: 3%;
-    left: 25%;
+    left: 27%;
   }
 
   .offer-price {
     padding: inherit;
     position: absolute;
     font-weight: 700;
-    width: 15%;
+    width: 20%;
     top: 3%;
     right: 0%;
   }
@@ -40,7 +41,7 @@
   .offer-location-date {
     padding: inherit;
     position: absolute;
-    left: 25%;
+    left: 27%;
     bottom: 3%;
   }
 }
