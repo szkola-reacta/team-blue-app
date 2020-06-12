@@ -23,7 +23,6 @@ function CategoryList({ categories }) {
         <Row className="offer-row">
           <Col>
             <Router>
-              <CategoryList path="/categories/" />
               <OfferList path="/categories/:id/offers" />
             </Router>
           </Col>
