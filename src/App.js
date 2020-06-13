@@ -5,7 +5,7 @@ import './App.scss';
 import Header from './components/Header';
 import Content from './components/Content';
 import Footer from './components/Footer';
-import Home from './components/pages/Home';
+import Home from './components/pages/home/Home';
 import OfferList from './components/OfferList'
 import Offer from './components/pages/Offer';
 
