@@ -2,34 +2,25 @@ import React, { useState, useEffect } from 'react'
 
 import { Container, Col, Row, Button } from 'react-bootstrap'
 
-import OfferContact from './../organisms/offerContact'
-import Footer from '../organisms/Footer'
+import { useParams } from '@reach/router'
 
-import logo from './../../images/logo-placeholder.svg'
+import OfferContact from '../offerContact'
 
 import './pages.scss'
 
 const Offer = () => {
+
+  const params = useParams()
   const [offer, setOffer] = useState({})
 
   useEffect(() => {
-    fetch("/api/offers/:id")
+    fetch(`/api/offers/${params.id}`)
     .then(response => response.json())
     .then(data => setOffer(data))
     }, [offer.id])
 
   return (
     <Container fluid>
-      <Row className="border-bottom">
-        <Col>
-          <img className="logo float-left m-3" src={logo} alt="er" />
-        </Col>
-        <Col>
-          <Button variant="primary" className="float-right m-4">
-            Sign in
-          </Button>
-        </Col>
-      </Row>
       <Row>
         <Col xs="8">
           <Row>
@@ -55,7 +46,6 @@ const Offer = () => {
           <OfferContact offer={offer} />
         </Col>
       </Row>
-      <Footer />
     </Container>
   )
 }
