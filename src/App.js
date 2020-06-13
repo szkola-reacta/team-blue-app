@@ -1,15 +1,16 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Router } from '@reach/router'
-
-import Home from './components/pages/Home';
-import List from './components/pages/List'
-import Offer from './components/pages/Offer';
 import './App.scss';
+
+import Header from './Components/Header';
+import Content from './Components/Content';
+import Footer from './Components/Footer';
+import Home from './components/pages/Home';
+import OfferList from './components/OfferList'
+import Offer from './components/pages/Offer';
 
 function App() {
 
-  const [categories, setCategories] = useState([]);
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
@@ -22,14 +23,15 @@ function App() {
   }, []);
 
   return (
-    <Fragment>
-      <Router>      
-        <Home path="/" categories={categories} />
-        <List path="/list" offers={offers} />
+    <div className="App">
+      <Header />
+      <Content>      
+        <Home path="/" />
+        <OfferList path="/offers" offers={offers} />
         <Offer path="/offer/:id"/>
-      </Router>
-      
-    </Fragment>
+      </Content>
+      <Footer />
+    </div>
   );
 }
 
