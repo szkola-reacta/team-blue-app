@@ -13,8 +13,8 @@ function CategoryList({ categories }) {
   return (
     <Container className="category-list">
       <Row className="category-row">
-        { categories.map((element, index) =>
-          <Col key={`category-${index}`} xs={12} sm={12} md={6} lg={3} xl={3}>
+        { categories.map((element) =>
+          <Col key={`category-${element.id}`} xs={12} sm={12} md={6} lg={3} xl={3}>
             <Link className="link-style" to={`/categories/${element.id}/offers`}>
               <Category {...element} />
             </Link>

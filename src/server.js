@@ -97,6 +97,10 @@ export function makeServer({ environment = 'test' }) {
 
       this.get('/categories');
 
+      this.get('/categories/:id', (schema, request) => {
+        return schema.categories.find(request.params.id);
+      });
+
       this.get('/categories/:id/offers', function (schema, request) {
         let category = schema.categories.find(request.params.id);
         let json = this.serialize(category.offers, 'offersList');
