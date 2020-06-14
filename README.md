@@ -82,3 +82,6 @@ It's a simple demo app, which allows user to list categories, categories' offers
 
 The project uses:
 [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap)
+[reach-router](https://github.com/reach/router)
+[miragejs](https://github.com/miragejs/miragejs/blob/master/LICENSE.md)
+[faker.js](https://github.com/Marak/faker.js)
