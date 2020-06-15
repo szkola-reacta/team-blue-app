@@ -1,40 +1,18 @@
-<<<<<<< HEAD
-import React, { Fragment, useState, useEffect } from 'react';
-
-import Search from './components/Search';
-import CategoryList from './components/CategoryList';
-=======
 import React, { useState, useEffect } from 'react';
 
->>>>>>> master
 import './App.scss';
 
-import Header from './Components/Header';
-import Content from './Components/Content';
-import Footer from './Components/Footer';
-import Home from './Components/Pages/Home/';
-import OfferList from './Components/OfferList';
+import Header from './components/Header';
+import Content from './components/Content';
+import Footer from './components/Footer';
+import Home from './components/Pages/Home/';
+import OfferList from './components/OfferList';
 
-<<<<<<< HEAD
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    fetch('/api/categories')
-      .then(response => response.json())
-      .then(data => setCategories(data));
-  }, []);
-
-  return (
-    <Fragment>
-      <Search />
-      <CategoryList categories={categories} />
-    </Fragment>
-=======
 function App() {
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
-    fetch(`api/categories/1/offers`)
+    fetch(`api/categories`)
       .then(response => response.json())
       .then(data => setOffers(data));
   }, []);
@@ -44,11 +22,10 @@ function App() {
       <Header />
       <Content>
         <Home path="/" />
-        <OfferList path="/offers" offers={offers} />
+        <OfferList path="/categories/:id/offers" offers={offers} />
       </Content>
       <Footer />
     </div>
->>>>>>> master
   );
 }
 
