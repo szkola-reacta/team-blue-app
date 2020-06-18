@@ -14,6 +14,8 @@ It's a simple demo app, which allows user to list categories, categories' offers
 
 - Faker (for generating random data)
 
+- Leaflet
+
 ## API URLs
 
 `GET /api/categories`
@@ -78,3 +80,4 @@ The project uses:
 [reach-router](https://github.com/reach/router)
 [miragejs](https://github.com/miragejs/miragejs/blob/master/LICENSE.md)
 [faker.js](https://github.com/Marak/faker.js)
+[leaflet](https://github.com/Leaflet/Leaflet)
