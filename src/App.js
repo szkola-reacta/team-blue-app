@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 import './App.scss';
@@ -15,7 +14,7 @@ function App() {
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
-    fetch(`api/categories/1/offers`)
+    fetch(`api/categories`)
       .then(response => response.json())
       .then(data => setOffers(data));
   }, []);
@@ -23,9 +22,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Content>      
+      <Content>
         <Home path="/" />
-        <OfferList path="/offers" offers={offers} />
+        <OfferList path="/categories/:id/offers" offers={offers} />
         <Offer path="/offer/:id"/>
       </Content>
       <Footer />

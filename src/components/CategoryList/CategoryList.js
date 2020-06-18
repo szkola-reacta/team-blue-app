@@ -2,9 +2,8 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Router, Link } from '@reach/router';
+import { Link } from '@reach/router';
 
-import OfferList from '../OfferList';
 import Category from '../Category';
 import './CategoryList.scss';
 import '../OfferList/OfferList.scss';
@@ -20,13 +19,6 @@ function CategoryList({ categories }) {
             </Link>
           </Col>
         )}
-        <Row className="offer-row">
-          <Col>
-            <Router>
-              <OfferList path="/categories/:id/offers" />
-            </Router>
-          </Col>
-        </Row>
       </Row>
     </Container>
   );

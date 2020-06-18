@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Offer.scss';
 
-function Offer({ thumbnail_url, name, price, city, added_at, id }) {
+function Offer({ thumbnail_url, name, price, city, added_at }) {
   return (
     <div className="offer">
       <div className="offer-thumbnail">
