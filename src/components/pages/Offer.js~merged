@@ -17,7 +17,7 @@ const Offer = () => {
     fetch(`/api/offers/${params.id}`)
     .then(response => response.json())
     .then(data => setOffer(data))
-    }, [params.id])
+    }, [offer.id])
 
   return (
     <Container fluid>
