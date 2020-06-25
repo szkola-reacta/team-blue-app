@@ -16,6 +16,8 @@ It's a simple demo app, which allows user to list categories, categories' offers
 
 - Leaflet
 
+- Node SASS
+
 ## API URLs
 
 `GET /api/categories`
@@ -77,7 +79,15 @@ It's a simple demo app, which allows user to list categories, categories' offers
 
 The project uses:
 [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap)
+
 [reach-router](https://github.com/reach/router)
+
 [miragejs](https://github.com/miragejs/miragejs/blob/master/LICENSE.md)
+
 [faker.js](https://github.com/Marak/faker.js)
+
 [leaflet](https://github.com/Leaflet/Leaflet)
+
+[node-sass](https://github.com/sass/node-sass/blob/master/LICENSE)
+
+[bootstrap](https://github.com/twbs/bootstrap/blob/main/LICENSE)
