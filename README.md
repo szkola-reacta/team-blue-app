@@ -78,16 +78,21 @@ It's a simple demo app, which allows user to list categories, categories' offers
 ### Sources
 
 The project uses:
+
+[react](https://github.com/facebook/react/blob/master/LICENSE)
+
 [react-bootstrap](https://github.com/react-bootstrap/react-bootstrap)
 
+[node-sass](https://github.com/sass/node-sass/blob/master/LICENSE)
+
 [reach-router](https://github.com/reach/router)
+
+[leaflet](https://github.com/Leaflet/Leaflet/blob/master/LICENSE)
 
 [miragejs](https://github.com/miragejs/miragejs/blob/master/LICENSE.md)
 
 [faker.js](https://github.com/Marak/faker.js)
 
-[leaflet](https://github.com/Leaflet/Leaflet)
+[jest-dom](https://github.com/testing-library/jest-dom/blob/master/LICENSE)
 
-[node-sass](https://github.com/sass/node-sass/blob/master/LICENSE)
-
-[bootstrap](https://github.com/twbs/bootstrap/blob/main/LICENSE)
+[user-event](https://github.com/testing-library/user-event/blob/master/LICENSE)
